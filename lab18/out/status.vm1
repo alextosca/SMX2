@@ -1,0 +1,21 @@
+● isc-dhcp-server.service - ISC DHCP IPv4 server
+   Loaded: loaded (/lib/systemd/system/isc-dhcp-server.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2017-10-26 17:15:08 UTC; 6min ago
+     Docs: man:dhcpd(8)
+ Main PID: 2115 (dhcpd)
+    Tasks: 1
+   Memory: 9.1M
+      CPU: 189ms
+   CGroup: /system.slice/isc-dhcp-server.service
+           └─2115 dhcpd -user dhcpd -group dhcpd -f -4 -pf /run/dhcp-server/dhcpd.pid -cf /etc/dhcp/dhcpd.conf enp0s8 enp0s9 enp0s10
+
+Oct 26 17:17:58 lab18vm1 dhcpd[2115]: ns2.example.org: host unknown.
+Oct 26 17:17:58 lab18vm1 dhcpd[2115]: DHCPACK on 192.168.216.17 to 08:00:27:fe:91:84 via 192.168.216.254
+Oct 26 17:19:20 lab18vm1 dhcpd[2115]: DHCPREQUEST for 192.168.218.13 from 08:00:27:19:7a:e1 via 192.168.218.254
+Oct 26 17:19:20 lab18vm1 dhcpd[2115]: ns1.example.org: host unknown.
+Oct 26 17:19:20 lab18vm1 dhcpd[2115]: ns2.example.org: host unknown.
+Oct 26 17:19:20 lab18vm1 dhcpd[2115]: DHCPACK on 192.168.218.13 to 08:00:27:19:7a:e1 (lab18vm6) via 192.168.218.254
+Oct 26 17:21:07 lab18vm1 dhcpd[2115]: DHCPREQUEST for 192.168.214.12 from 08:00:27:99:39:93 (lab18vm3) via enp0s8
+Oct 26 17:21:07 lab18vm1 dhcpd[2115]: ns1.example.org: host unknown.
+Oct 26 17:21:07 lab18vm1 dhcpd[2115]: ns2.example.org: host unknown.
+Oct 26 17:21:07 lab18vm1 dhcpd[2115]: DHCPACK on 192.168.214.12 to 08:00:27:99:39:93 (lab18vm3) via enp0s8
